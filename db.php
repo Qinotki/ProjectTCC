@@ -1,10 +1,10 @@
 <?php
     session_start();
 
-    $host = '127.0.0.1';
-    $user = 'root';
-    $password = '';
-    $database = 'pharmacy_inventory';
+    $host = 'project-db.c3lmmtyj2ubz.us-east-1.rds.amazonaws.com';
+    $user = 'main';
+    $password = 'project-password';
+    $database = 'project';
 
     try {
         // Create a new PDO instance
