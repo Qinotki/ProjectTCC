@@ -1,14 +1,18 @@
 <?php
     session_start();
 
-    $host = 'project-db.c3lmmtyj2ubz.us-east-1.rds.amazonaws.com';
+    // Database credentials
+    $host = 'project-db.c3lmmtj2ubz.us-east-1.rds.amazonaws.com';
     $user = 'main';
     $password = 'project-password';
     $database = 'project';
-
+    
     try {
         // Create a new PDO instance
-        $connection = new PDO("mysql:host=$host", $user, $password);
+        $dsn = "mysql:host=$host;port=3306;charset=utf8mb4";
+        $connection = new PDO($dsn, $user, $password);
+        
+        // Set PDO error mode to exception
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Create the database if it doesn't exist
