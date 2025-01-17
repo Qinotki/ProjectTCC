@@ -2,7 +2,7 @@
     session_start();
 
     // Database credentials
-    $host = 'project-db.c3lmmtj2ubz.us-east-1.rds.amazonaws.com';
+    $host = 'project.cbxgqfwuklsl.us-east-1.rds.amazonaws.com';
     $user = 'main';
     $password = 'project-password';
     $database = 'project';
